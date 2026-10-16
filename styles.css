@@ -1,124 +1,308 @@
-/* VEILMARK / FIRST MARK 001 — custom storefront starter */
-:root{--bg:#0b0b0d;--panel:#121214;--panel2:#19191c;--ink:#f1eee8;--muted:#a7a19a;--gold:#b49a65;--gold-light:#ddc58d;--crimson:#7d1723;--line:#302b25;--max:1280px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.announcement{padding:9px 16px;text-align:center;background:#080809;color:var(--gold-light);font-size:10px;letter-spacing:.2em;border-bottom:1px solid #26221d}.announcement span{padding:0 9px;color:#756343}.site-header{height:88px;padding:0 max(5vw,24px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:rgba(11,11,13,.96);border-bottom:1px solid #29251f;position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}.wordmark{font-family:Cinzel,Georgia,serif;font-weight:700;letter-spacing:.16em;font-size:25px;line-height:1.1}.wordmark span{color:var(--gold-light)}.wordmark small{display:block;font:8px Inter,sans-serif;letter-spacing:.19em;color:var(--muted);margin-top:8px}.site-nav{display:flex;align-items:center;gap:30px;font-size:11px;text-transform:uppercase;letter-spacing:.12em}.site-nav a:not(.nav-cta){color:#d0cbc3}.site-nav a:hover,.footer-links a:hover{color:var(--gold-light)}.nav-cta{padding:12px 17px;border:1px solid #76613e;color:var(--gold-light)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:8px 12px}.hero{min-height:640px;height:min(78vw,760px);max-height:800px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#101216}.hero-art{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(8,8,10,.35),rgba(8,8,10,.06),rgba(8,8,10,.35)),url('assets/veilmark-banner.jpg');background-size:cover;background-position:center}.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,7,9,.24),rgba(6,7,9,.55) 60%,#0b0b0d 100%)}.hero-content{position:relative;z-index:1;padding:60px 20px 80px;max-width:900px}.eyebrow{font-size:10px;letter-spacing:.25em;color:var(--gold-light);text-transform:uppercase;margin:0 0 17px}.hero .eyebrow{display:flex;justify-content:center;align-items:center;gap:13px}.line{width:34px;height:1px;background:var(--gold)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Cinzel,Georgia,serif;font-weight:500;line-height:1.15}h1{font-size:clamp(37px,6vw,78px);letter-spacing:.015em;margin:0 0 22px}h1 em,h2 em{font-style:normal;color:var(--gold-light)}.hero-copy{color:#d5d0c7;letter-spacing:.07em;font-size:13px;margin-bottom:34px}.button{display:inline-flex;gap:26px;align-items:center;justify-content:center;padding:15px 21px;font-size:10px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.button-gold{background:var(--gold);color:#101010}.button-gold:hover{background:var(--gold-light)}.hero-bottom{position:absolute;z-index:1;bottom:20px;left:5%;right:5%;display:flex;justify-content:space-between;color:#a7a19a;font-size:8px;letter-spacing:.2em}.section-pad{padding:100px max(5vw,24px)}.intro{text-align:center;max-width:850px;margin:auto;padding-top:110px;padding-bottom:90px}.intro h2,.section-heading h2,.newsletter h2{font-size:clamp(30px,4vw,49px);margin-bottom:20px}.intro-copy{max-width:580px;margin:0 auto;color:var(--muted);font-size:13px}.rule{margin:38px auto 0;width:180px;height:1px;background:var(--line);position:relative}.rule span{position:absolute;top:-14px;left:calc(50% - 15px);width:30px;height:28px;background:var(--bg);color:var(--gold);font:13px Cinzel,serif;display:grid;place-items:center}.collections{background:#101012;border-top:1px solid #201d19;border-bottom:1px solid #201d19}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}.section-heading h2{margin:0}.section-heading>p,.shop-note{max-width:290px;color:var(--muted);font-size:11px;margin:0}.collection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.collection-card{position:relative;min-height:430px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#29231b 0,#171719 48%,#0b0b0d 100%);border:1px solid #302b25;display:flex;flex-direction:column;justify-content:space-between;padding:23px;isolation:isolate}.collection-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 15%,rgba(8,8,10,.1) 35%,#0b0b0d 75%);z-index:-1}.collection-card.vipersix{background:radial-gradient(ellipse at 50% 35%,#36171b 0,#191416 48%,#0b0b0d 100%)}.collection-card.ghostwatch{background:radial-gradient(ellipse at 50% 35%,#1c2b2c 0,#151719 48%,#0b0b0d 100%)}.card-index{font-size:8px;letter-spacing:.18em;color:#a9a096}.collection-art{position:absolute;z-index:-1;top:64px;left:0;right:0;text-align:center;font-family:Cinzel,Georgia,serif;font-size:clamp(120px,17vw,220px);font-weight:600;line-height:1;color:rgba(196,164,102,.16);text-shadow:0 0 45px rgba(177,142,75,.12)}.art-viper{color:rgba(156,43,51,.24);font-size:clamp(100px,13vw,170px);top:100px}.art-ghost{color:rgba(118,157,159,.18)}.collection-copy .eyebrow{font-size:8px;margin-bottom:10px}.collection-copy h3{font-size:29px;letter-spacing:.1em;margin:0 0 8px}.collection-copy>p:not(.eyebrow){font-size:11px;color:#c4bdb3;margin-bottom:18px}.text-link{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #494033;padding-top:13px;color:var(--gold-light);font-size:9px;letter-spacing:.13em;text-transform:uppercase}.manifesto{position:relative;overflow:hidden;min-height:410px;display:flex;align-items:center;padding:75px max(8vw,30px);background:linear-gradient(105deg,#17130f,#0b0b0d 65%);border-bottom:1px solid #27231e}.manifesto-inner{position:relative;z-index:1}.manifesto h2{font-size:clamp(40px,6vw,70px);margin:0 0 16px}.manifesto-inner>p:not(.eyebrow){color:var(--muted);font-size:12px;margin-bottom:27px}.button-outline{border:1px solid var(--gold);color:var(--gold-light)}.button-outline:hover{background:#1c1913}.manifesto-mark{position:absolute;right:9%;top:50%;transform:translateY(-50%);font:clamp(170px,27vw,360px) Cinzel,Georgia,serif;color:rgba(185,154,96,.07);letter-spacing:-.13em}.manifesto-mark span{color:rgba(185,154,96,.11)}.shop{background:#0d0d0f}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product-card{background:#121214;border:1px solid #29251f}.product-image{aspect-ratio:4/3;background:linear-gradient(145deg,#202023,#0d0d0f);display:grid;place-items:center;color:#63543a;font:70px Cinzel,serif;position:relative;overflow:hidden}.product-image:before{content:"";position:absolute;width:130px;height:170px;border:1px solid rgba(180,154,101,.28);border-radius:45% 45% 15% 15%;transform:translateY(15px);background:linear-gradient(90deg,#171719,#252528,#111113);box-shadow:0 25px 35px #080808}.product-image span{position:relative;font-size:25px;color:rgba(190,158,94,.7);letter-spacing:.1em}.product-info{padding:18px}.product-tag{color:var(--gold-light);font-size:8px;letter-spacing:.2em;text-transform:uppercase}.product-info h3{font-size:17px;margin:8px 0}.product-info p{font-size:11px;color:var(--muted);margin-bottom:15px}.product-link{display:block;text-align:center;padding:11px;border:1px solid #54452f;color:var(--gold-light);font-size:9px;text-transform:uppercase;letter-spacing:.13em}.store-note{margin-top:25px;padding:14px 16px;border:1px solid #29251f;color:#aaa39a;font-size:10px}.status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px}.newsletter{text-align:center;background:#141313;border-top:1px solid #28221b}.newsletter>p:not(.eyebrow){font-size:12px;color:var(--muted);margin-bottom:25px}.site-footer{padding:55px max(5vw,24px) 24px;text-align:center;background:#080809;border-top:1px solid #28231d}.footer-wordmark{display:inline-block}.site-footer>p{font-family:Cinzel,Georgia,serif;color:var(--gold-light);font-size:12px;margin:24px 0}.footer-links{display:flex;justify-content:center;gap:24px;font-size:10px;color:var(--muted);margin:25px 0}.copyright{display:block;padding-top:20px;border-top:1px solid #211e1a;color:#6f6a63;font-size:8px;letter-spacing:.15em}
-@media(max-width:850px){.site-header{height:76px}.menu-toggle{display:block}.site-nav{display:none;position:absolute;top:75px;left:0;right:0;background:#0b0b0d;border-bottom:1px solid var(--line);padding:22px 24px;flex-direction:column;align-items:stretch;gap:18px}.site-nav.open{display:flex}.nav-cta{text-align:center}.hero{min-height:550px;height:72vh}.hero-art{background-position:52% center}.collection-grid{grid-template-columns:1fr;max-width:520px;margin:auto}.collection-card{min-height:380px}.collection-art{font-size:210px}.art-viper{font-size:160px}.product-grid{grid-template-columns:1fr;max-width:520px;margin:auto}.section-heading{align-items:start;flex-direction:column}.manifesto-mark{right:-10%;opacity:.6}.section-pad{padding-top:75px;padding-bottom:75px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-/* VEILMARK — cinematic collection cards */
-.collection-card .collection-art {
-  width: 100%;
-  height: 300px;
+/* VEILMARK — First Mark 001 */
+:root {
+  --bg: #0b0b0d;
+  --panel: #121214;
+  --panel-2: #19191c;
+  --ink: #f1eee8;
+  --muted: #a7a19a;
+  --gold: #b49a65;
+  --gold-light: #ddc58d;
+  --crimson: #7d1723;
+  --line: #302b25;
+  --max: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 11, 13, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.announcement {
+  padding: 10px 20px;
+  text-align: center;
+  color: var(--gold-light);
+  border-bottom: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.site-header > *,
+.site-header .header-inner {
+  min-width: 0;
+}
+
+.header-inner {
+  max-width: var(--max);
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.wordmark {
+  font-family: Cinzel, Georgia, serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.wordmark small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font: 8px Inter, Arial, sans-serif;
+  letter-spacing: 0.18em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav a {
+  color: #d0cbc3;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover,
+.text-link:hover {
+  color: var(--gold-light);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: #100e0a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--gold-light);
+}
+
+main {
   overflow: hidden;
-  display: block;
-  margin: 14px 0 18px;
+}
+
+.hero {
+  min-height: 620px;
   position: relative;
-  background: #0b0b0d;
+  display: grid;
+  place-items: center;
+  padding: 100px 24px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, #211a16 0%, #101012 48%, #0b0b0d 78%);
 }
 
-.collection-card .collection-art img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  opacity: 0.9;
-}
-
-.collection-card .collection-art::after {
-  content: "";
+.hero-art {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 45%,
-    rgba(11, 11, 13, 0.25) 65%,
-    #0b0b0d 100%
-  );
-  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(11,11,13,.25), #0b0b0d),
+    url("assets/veilmark-banner.jpg") center 45% / cover no-repeat;
+  opacity: 0.65;
 }
 
-.collection-card .collection-copy {
+.hero-content {
   position: relative;
   z-index: 1;
+  width: min(900px, 100%);
 }
 
-/* VEILMARK — landscape collection card layout */
+.eyebrow {
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.section-heading h2,
+.manifesto h2 {
+  font-family: Cinzel, Georgia, serif;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.hero h1 {
+  margin: 18px 0;
+  font-size: clamp(42px, 6vw, 76px);
+}
+
+.hero h1 span,
+.section-heading h2 em {
+  color: var(--gold-light);
+  font-style: normal;
+}
+
+.hero-content > p {
+  color: #ded8ce;
+  font-size: 14px;
+}
+
+.hero .button {
+  margin-top: 18px;
+}
+
+.hero-footer {
+  position: absolute;
+  right: 5%;
+  bottom: 28px;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-pad {
+  padding: 84px 24px;
+}
+
+.collections {
+  max-width: var(--max);
+  margin: auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.section-heading h2,
+.manifesto h2 {
+  margin: 8px 0 0;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.section-heading > p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Three equal cards */
 .collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
+  gap: 16px;
 }
 
 .collection-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.collection-card.cerberus {
+  background: linear-gradient(145deg, #211b14, #0b0b0d 72%);
+}
+
+.collection-card.vipersix {
+  background: linear-gradient(145deg, #251315, #0b0b0d 72%);
+}
+
+.collection-card.ghostwatch {
+  background: linear-gradient(145deg, #142022, #0b0b0d 72%);
 }
 
 .collection-card .card-index {
   order: 0;
-  margin-bottom: 14px;
+  margin: 0 0 16px;
+  color: var(--gold-light);
+  font-size: 9px;
+  letter-spacing: 0.16em;
 }
 
+/* Artwork occupies the same landscape frame in every card */
 .collection-card .collection-art {
   order: 1;
+  position: relative;
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 2;
   margin: 0 0 20px;
   overflow: hidden;
-  position: relative;
-  background: #0b0b0d;
+  background: #080809;
 }
 
 .collection-card .collection-art img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 1;
-}
-
-.collection-card .collection-art::after {
-  content: none;
-}
-
-.collection-card .collection-copy {
-  order: 2;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.collection-card .collection-copy .text-link {
-  margin-top: auto;
-}
-
-/* VEILMARK — final collection card alignment */
-.collection-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.collection-card .card-index {
-  position: static;
-  order: 0;
-  margin: 0 0 14px;
-}
-
-.collection-card .collection-art {
-  order: 1;
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  margin: 0 0 18px;
-  overflow: hidden;
-}
-
-.collection-card .collection-art img {
-  width: 100%;
-  height: 100%;
-  display: block;
   object-fit: cover;
   object-position: center;
   opacity: 1;
@@ -130,22 +314,246 @@
   display: none;
 }
 
-.collection-card .collection-copy {
-  position: static;
+.collection-copy {
   order: 2;
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
 }
 
-.collection-card .collection-copy .eyebrow,
-.collection-card .collection-copy h3,
-.collection-card .collection-copy > p:not(.eyebrow),
-.collection-card .collection-copy .text-link {
-  position: static;
+.collection-copy .eyebrow {
+  margin: 0 0 5px;
+  font-size: 9px;
 }
 
-.collection-card .collection-copy .text-link {
+.collection-copy h3 {
+  margin: 0 0 4px;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(20px, 2vw, 27px);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.collection-copy > p:not(.eyebrow) {
+  margin: 0 0 18px;
+  color: #d0cbc3;
+  font-size: 12px;
+}
+
+.text-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
+.manifesto {
+  position: relative;
+  padding: 90px 24px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: radial-gradient(ellipse at left, #201811, #0b0b0d 70%);
+}
+
+.manifesto-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.manifesto-inner > p:not(.eyebrow) {
+  max-width: 620px;
+  color: #c7c0b6;
+}
+
+.manifesto-mark {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: rgba(180,154,101,.06);
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(180px, 30vw, 360px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.shop {
+  max-width: var(--max);
+  margin: auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.product-image {
+  display: grid;
+  place-items: center;
+  min-height: 250px;
+  background: #141416;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  margin-bottom: 4px;
+  font-family: Cinzel, Georgia, serif;
+  font-weight: 500;
+}
+
+.product-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.site-footer {
+  padding: 32px 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 850px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 22px;
+  }
+
+  .collection-card .card-index {
+    grid-column: 1 / -1;
+  }
+
+  .collection-card .collection-art {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .collection-copy {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcement {
+    font-size: 8px;
+  }
+
+  .header-inner {
+    padding: 14px 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    border: 1px solid var(--line);
+    padding: 8px 10px;
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid var(--line);
+    background: #0b0b0d;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 12px 0;
+  }
+
+  .hero {
+    min-height: 540px;
+    padding: 80px 20px;
+  }
+
+  .hero-footer {
+    font-size: 7px;
+  }
+
+  .section-pad {
+    padding: 58px 18px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .collection-card {
+    display: flex;
+    padding: 14px;
+  }
+
+  .collection-card .collection-art {
+    aspect-ratio: 3 / 2;
+    margin-bottom: 18px;
+  }
+
+  .collection-copy {
+    display: flex;
+  }
+
+  .manifesto {
+    padding: 64px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
