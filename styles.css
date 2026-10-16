@@ -302,11 +302,13 @@ main {
 .collection-card .collection-art img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
   object-position: center;
   opacity: 1;
 }
+
 
 .collection-card .collection-art::before,
 .collection-card .collection-art::after {
