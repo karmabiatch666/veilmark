@@ -6,11 +6,11 @@
 
 /* VEILMARK — aligned collection artwork */
 .collection-card .collection-art {
-  height: 230px;
   width: 100%;
+  height: 300px;
   overflow: hidden;
   display: block;
-  margin: 18px 0 0;
+  margin: 14px 0 18px;
   position: relative;
   background: #0b0b0d;
 }
@@ -19,11 +19,16 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .collection-card .collection-copy {
   position: relative;
   z-index: 1;
 }
+
+.collection-card .collection-art::after {
+  content: none;
+}
+
