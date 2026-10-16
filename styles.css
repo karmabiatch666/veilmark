@@ -4,7 +4,7 @@
 @media(max-width:850px){.site-header{height:76px}.menu-toggle{display:block}.site-nav{display:none;position:absolute;top:75px;left:0;right:0;background:#0b0b0d;border-bottom:1px solid var(--line);padding:22px 24px;flex-direction:column;align-items:stretch;gap:18px}.site-nav.open{display:flex}.nav-cta{text-align:center}.hero{min-height:550px;height:72vh}.hero-art{background-position:52% center}.collection-grid{grid-template-columns:1fr;max-width:520px;margin:auto}.collection-card{min-height:380px}.collection-art{font-size:210px}.art-viper{font-size:160px}.product-grid{grid-template-columns:1fr;max-width:520px;margin:auto}.section-heading{align-items:start;flex-direction:column}.manifesto-mark{right:-10%;opacity:.6}.section-pad{padding-top:75px;padding-bottom:75px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-/* VEILMARK — aligned collection artwork */
+/* VEILMARK — cinematic collection cards */
 .collection-card .collection-art {
   width: 100%;
   height: 300px;
@@ -19,16 +19,26 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.9;
+}
+
+.collection-card .collection-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(11, 11, 13, 0.25) 65%,
+    #0b0b0d 100%
+  );
+  pointer-events: none;
 }
 
 .collection-card .collection-copy {
   position: relative;
   z-index: 1;
-}
-
-.collection-card .collection-art::after {
-  content: none;
 }
 
